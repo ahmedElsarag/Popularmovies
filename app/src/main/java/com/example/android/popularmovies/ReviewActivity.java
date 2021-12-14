@@ -31,6 +31,7 @@ public class ReviewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review);
 
+        getSupportActionBar().hide();
 
         reviewRecyclerView = (RecyclerView) findViewById(R.id.Rec_Reviews);
 

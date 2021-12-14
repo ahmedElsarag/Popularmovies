@@ -13,6 +13,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -62,6 +63,8 @@ public class DetailsActivity extends AppCompatActivity {
     TextView tv_rate;
     @BindView(R.id.im_fav)
     ImageButton imageButton;
+    @BindView(R.id.cover_photo)
+    ImageView coverPhoto;
 
     MovieDB mDb;
 
@@ -80,6 +83,8 @@ public class DetailsActivity extends AppCompatActivity {
         Intent i = getIntent();
         movie = (Movie) i.getParcelableExtra("Movie");
         Picasso.with(this).load("http://image.tmdb.org/t/p/w185" + movie.getPoster()).into(iv_image);
+        Picasso.with(this).load("http://image.tmdb.org/t/p/w185" + movie.getPoster()).into(coverPhoto);
+
         tv_date.setText(movie.getDate());
         tv_rate.setText(movie.getRate());
         tv_title.setText(movie.getTitle());
@@ -95,7 +100,7 @@ public class DetailsActivity extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            imageButton.setBackgroundColor(Color.RED);
+                            imageButton.setImageResource(R.drawable.ic_favorite_black_24dp);
                         }
                     });
                 }
@@ -141,9 +146,7 @@ public class DetailsActivity extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            imageButton.setBackgroundColor(Color.RED);
-
-
+                            imageButton.setImageResource(R.drawable.ic_favorite_black_24dp);
                         }
                     });
 
@@ -158,7 +161,7 @@ public class DetailsActivity extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            imageButton.setBackgroundColor(Color.WHITE);
+                            imageButton.setImageResource(R.drawable.ic_favorite_border_black_24dp);
 
                         }
                     });
