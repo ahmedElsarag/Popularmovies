@@ -31,7 +31,6 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_marginBottom="15dp"
             android:orientation="horizontal"
             android:padding="5dp">
@@ -49,17 +48,18 @@
                 android:orientation="vertical">
 
                 <TextView
-
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
                     android:text="@string/Date"
+                    android:textColor="@android:color/black"
                     android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/tv_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
                     android:layout_marginBottom="5dp"
                     android:textSize="20sp" />
 
@@ -69,12 +69,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
                     android:text="@string/Rate"
+                    android:textColor="@android:color/black"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/tv_rate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
                     android:textSize="20sp" />
 
                 <ImageButton
@@ -91,7 +93,7 @@
 
         <TextView
             android:id="@+id/tv_overview"
-
+            android:textColor="@android:color/black"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="5dp" />
@@ -107,6 +109,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
             android:text="@string/Trailers"
+            android:textColor="@android:color/black"
             android:textSize="20sp" />
 
         <android.support.v7.widget.RecyclerView
