@@ -75,6 +75,7 @@ public class DetailsActivity extends AppCompatActivity {
 
 
         setContentView(R.layout.activity_movie_detail);
+        getSupportActionBar().hide();
         ButterKnife.bind(this);
         Intent i = getIntent();
         movie = (Movie) i.getParcelableExtra("Movie");
